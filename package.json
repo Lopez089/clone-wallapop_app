@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start:api": "npm run start --workspace=api",
-    "start:app": "npm run start --workspace=app"
+    "start:app": "npm run start --workspace=app",
+    "eslint:fix": "standard --fix",
+    "eslint": "standard"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,14 @@
   "workspaces": [
     "api",
     "app"
-  ]
+  ],
+  "eslintConfig": {
+    "extends": "node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true
+    }
+  },
+  "devDependencies": {
+    "standard": "^16.0.4"
+  }
 }
